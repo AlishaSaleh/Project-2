@@ -91,7 +91,19 @@
                 <input type="text" name="restaurant-location" placeholder="Restaurant Location"
                     id="restaurant-location">
             </div>
-            <button type="submit" class="ui button">Add Restaurant</button>
+            <div class="field required">
+                <label>Image</label>
+                <input type="file" name="files[]" placeholder="Restaurant image"
+                    id="rest-img">
+            </div>
+             <!-- display image -->
+                <div id="restaurant-image" width="150" height="150"></div>
+            <!-- <img src="img/ <img src="images/" alt="Greek sunset" class="responsive-img materialboxed">" alt="Greek sunset" class="responsive-img materialboxed">
+            -->
+            </div>
+            <button type="submit" class="ui button">Upload Image</button>
+        <button type="submit" class="ui button">Add Restaurant</button>
+
         </form>
     </div>
     {{/if}}
@@ -141,3 +153,4 @@
 
 <script src="/js/review.js"></script>
 <script src="/js/addrestaurant.js"></script>
+<script src="/js/upload.js"></script>
