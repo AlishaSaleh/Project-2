@@ -22,6 +22,11 @@ Restaurant.init(
         type: DataTypes.STRING,
         allowNull: false
       },
+      img_url: {
+        type: DataTypes.STRING,
+        defaultValue:"https://github.com/Loosekonnection/believe/blob/main/img/Tomatoes.JPG",
+        allowNull: true, 
+      },
     },
     {
       sequelize,
