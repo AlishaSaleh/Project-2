@@ -1,0 +1,78 @@
+<div class="ui raised very padded text container segment">
+    <h2 class="ui header">Restaurant</h2>
+
+
+    {{#if logged_in}}
+    <div class="ui raised very padded container segment">
+        <h4>Add a restaurant: </h4>
+        <form class="ui form new-restaurant-form">
+            <div class="field required">
+                <label>Restaurant Name: </label>
+                <input type="text" name="restaurant-name" placeholder="Restaurant Name" id="restaurant-name">
+            </div>
+
+            <div class="field required">
+                <label>Location</label>
+                <input type="text" name="restaurant-location" placeholder="Restaurant Location"
+                    id="restaurant-location">
+            </div>
+            <button type="submit" class="ui button">Add Restaurant</button>
+
+            <div class="field required">
+                <label>Image</label>
+                <input type="file" name="files[]" placeholder="Restaurant image"
+                    id="rest-img">
+
+                <!-- display image -->
+                <div id=restaurant-image" width="150" height="150"></div>
+            </div>
+            <button type="submit" class="ui button">Upload Image</button>
+
+        </form>
+    </div>
+    {{/if}}
+
+    <br>
+    <br>
+
+    {{#if user.reviews.length}}
+    <div class="row">
+        <div class="column">
+            <h3>Your Reviews: </h3>
+            {{#each user.reviews as |review|}}
+            <div class="ui raised">
+                <h4><a href="/reviews/{{review.id}}">{{review.title}}</a></h4>
+            </div>
+            <div class="ui" id="delete-review">
+                <button type="submit" class="ui button" id="delete-review-btn" data-id="{{review.id}}">Delete</button>
+            </div>
+            {{/each}}
+        </div>
+        {{/if}}
+    </div>
+
+    {{#if restaurants.length}}
+    <div class="row">
+        <div class="column">
+            <h3>All Restaurants: </h3>
+            {{#each restaurants as |restaurant|}}
+            <div class="ui raised">
+                <h4><a href="/restaurants/{{restaurant.id}}">{{restaurant.name}}, {{restaurant.location}}</a></h4>
+            </div>
+            <div class="ui" id="delete-restaurant">
+                <button type="submit" class="ui button" id="delete-restaurant-btn" data-id="{{restaurant.id}}">Delete</button>
+            </div>
+            {{/each}}
+        </div>
+        {{/if}}
+    </div>
+</div>
+
+{{#if logged_in}}
+<script src="/js/script.js"></script>
+<script>
+
+</script>
+{{/if}}
+
+<script src="/js/uploadjs"></script>
