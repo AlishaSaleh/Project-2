@@ -28,6 +28,7 @@ On the back-end:
 * Sequelize ORM
 * BCrypt
 * Cloudinary 
+
 On the front-end:
 * JavaScript/jQuery
 * Semantic UI
