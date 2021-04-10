@@ -1,4 +1,4 @@
-# Project-2
+# Project 2: Few Fries Short (ffs)
 
 ## Description
 In this project we have created a Content Management System (CMS) restuarant review site to publish reviews, comments and thoughts about restaurants and fast food outlets. It is created using the Model-View-Controller paradigm.
