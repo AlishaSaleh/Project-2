@@ -46,6 +46,12 @@ This was a collaborative project, made in equal parts by:
 * To use the database: change the credientials in ``config/connection.js`` to your own and run ``schema.sql`` in your database management application
 * To use the application in a localhost run ``node server.js``
 
+## Usage
+
+The screenshot below demonstrates the homepage of the application: 
+
+![homepage](/images/ffs-screenshot.png)
+
 ## License
 
 > This project was created under the [MIT License](https://opensource.org/licenses/MIT)
